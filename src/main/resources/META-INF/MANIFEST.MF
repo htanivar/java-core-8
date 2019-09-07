@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: sin.java.readpropertyfile.Main
+Class-Path: commons-lang3-3.9.jar
+
