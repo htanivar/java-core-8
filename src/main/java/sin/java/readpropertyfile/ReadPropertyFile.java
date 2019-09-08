@@ -33,6 +33,9 @@ public class ReadPropertyFile {
 
 
     private String readPropertyFromFile(String propertyName) {
+
+
+
         String ret = "";
         try (InputStream propFile = getClass()
                 .getClassLoader().getResourceAsStream("myproperties.properties")) {
@@ -59,4 +62,6 @@ public class ReadPropertyFile {
         return StringUtils.defaultIfEmpty(ret, "");
 
     }
+
+
 }
