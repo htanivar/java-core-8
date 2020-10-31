@@ -14,7 +14,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 @RunWith(JUnit4.class)
-@Slf4j
 public class BinaryGapFinderTest {
 
     /**
@@ -23,6 +22,8 @@ public class BinaryGapFinderTest {
     @Test
     public void findBinaryGapTest(){
         BinaryGapFinder binaryGapFinder = new BinaryGapFinder();
-        assertThat(binaryGapFinder.solution(1041 ),is(5));
+//        assertThat(binaryGapFinder.solution(1041 ),is(5));
+//        assertThat(binaryGapFinder.solution(32 ),is(0));
+        assertThat(binaryGapFinder.solution(5 ),is(1));
     }
 }
