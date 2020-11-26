@@ -12,6 +12,7 @@ import java.util.List;
 @RunWith(Parameterized.class)
 public class InsertionSortTest {
 
+
     private final int[] input;
     private InsertionSort insertionSort;
 

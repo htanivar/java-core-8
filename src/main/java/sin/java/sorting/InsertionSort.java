@@ -4,6 +4,7 @@ package sin.java.sorting;
  * Guide from Youtube: https://www.youtube.com/watch?v=lCDZ0IprFw4
  */
 public class InsertionSort {
+
     public int[] getIntArraySorted(int[] inputAsArray) {
         System.out.println("input array for sorting: " + debugTest(inputAsArray));
         int[] sortedArray = getSortedArray(inputAsArray);
@@ -12,6 +13,7 @@ public class InsertionSort {
     }
 
     private int[] getSortedArray(int[] inputAsArray) {
+
         int outerLoopCounter, innerLoopCounter, temp, keyValue;
         System.out.println("0th Element :" + inputAsArray[0] + " always sorted because it is the first element");
         for (outerLoopCounter = 1; outerLoopCounter <= inputAsArray.length - 1; outerLoopCounter++) {
@@ -37,6 +39,7 @@ public class InsertionSort {
         }
         return inputAsArray;
     }
+
 
     private String debugTest(int[] input) {
         StringBuilder stringBuilder = new StringBuilder();
