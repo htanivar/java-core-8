@@ -1,5 +1,6 @@
 package sin.java.read.propertyfile;
 
+import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.FileNotFoundException;
@@ -10,7 +11,15 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.stream.Collectors;
 
+
 public class ReadPropertyFile {
+
+    private String propFileName;
+
+    public ReadPropertyFile(String propFileName) {
+        this.propFileName = propFileName;
+    }
+
     public Properties readAllMySystemVariable() {
         Properties pros = System.getProperties();
         return pros;
@@ -21,10 +30,10 @@ public class ReadPropertyFile {
         ret = System.getProperty(propertyName);
         if (!StringUtils.isEmpty(ret)) {
             return ret;
-        }else{
+        } else {
             ret = readPropertyFromFile(propertyName);
-            if(StringUtils.isEmpty(ret)){
-             throw new IllegalArgumentException("Unable to find System Property :"+propertyName);
+            if (StringUtils.isEmpty(ret)) {
+                throw new IllegalArgumentException("Unable to find System Property :" + propertyName);
             }
 
         }
@@ -35,9 +44,10 @@ public class ReadPropertyFile {
     private String readPropertyFromFile(String propertyName) {
         String ret = "";
         try (InputStream propFile = getClass()
-                .getClassLoader().getResourceAsStream("myproperties.properties")) {
+                .getClassLoader().getResourceAsStream(propFileName)) {
             Properties prop = new Properties();
             // load a properties file
+            Preconditions.checkArgument(propFile != null, "Property file input stream is null, filename" + propFileName);
             prop.load(propFile);
 
             Map<String, String> map = new HashMap();
@@ -51,6 +61,8 @@ public class ReadPropertyFile {
                 return propertyFromFile;
             }
 
+        } catch (NullPointerException e) {
+            e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

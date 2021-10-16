@@ -11,17 +11,17 @@ import static org.junit.Assert.assertTrue;
 
 public class ReadPropertyFileTest {
 
-    ReadPropertyFile readPropertyFile = new ReadPropertyFile();
+    ReadPropertyFile readPropertyFile = new ReadPropertyFile("myproperties.properties");
 
     @Test
-    public void validSystemPropertyTest() {
+    public void validSystemPropertyTest()  {
         assertThat(readPropertyFile.readMyProperty("user.name"), is("root"));
         assertThat(readPropertyFile.readMyProperty("my-url"), is("http://yahoo.co.uk"));
         assertThat(readPropertyFile.readMyProperty("my-test-url"), is("http://test.co.uk"));
     }
 
     @Test
-    public void printAllSystemVariablesTest(){
-        assertTrue("Properties class is not returned",readPropertyFile.readAllMySystemVariable() instanceof Properties);
+    public void printAllSystemVariablesTest() {
+        assertTrue("Properties class is not returned", readPropertyFile.readAllMySystemVariable() instanceof Properties);
     }
 }
