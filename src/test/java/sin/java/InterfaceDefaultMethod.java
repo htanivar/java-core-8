@@ -1,10 +1,13 @@
 package sin.java;
 
 import org.junit.Test;
+import sin.java.interfaces.MovementInt;
 
-public class InterfaceDefaultMethod {
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
+public class InterfaceDefaultMethod implements MovementInt {
     @Test
-    public void ttd_step(){
-        throw new IllegalStateException("Code Not implemented");
+    public void defaultInterfaceMethod() {
+        assertThat(how()).isEqualTo("I am moving without Implementation Class - New Style");
     }
 }

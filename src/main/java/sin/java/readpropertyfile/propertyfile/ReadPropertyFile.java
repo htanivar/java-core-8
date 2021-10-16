@@ -1,4 +1,4 @@
-package sin.java.readpropertyfile;
+package sin.java.readpropertyfile.propertyfile;
 
 import org.apache.commons.lang3.StringUtils;
 

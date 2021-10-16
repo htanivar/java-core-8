@@ -1,8 +1,7 @@
 package sin.java.interfaces;
 
 public interface MovementInt {
-    String howOldStyle();
-    default String how(){
-     return "I am implemented in Interface with default - New Style";
+    default String how() {
+        return "I am moving without Implementation Class - New Style";
     }
 }
