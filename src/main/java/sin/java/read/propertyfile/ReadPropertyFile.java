@@ -61,6 +61,12 @@ public class ReadPropertyFile {
                 return propertyFromFile;
             }
 
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return StringUtils.defaultIfEmpty(ret, "");
 
