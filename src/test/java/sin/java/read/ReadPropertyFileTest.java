@@ -1,7 +1,7 @@
-package sin.java.readpropertyfile;
+package sin.java.read;
 
 import org.junit.Test;
-import sin.java.readpropertyfile.propertyfile.ReadPropertyFile;
+import sin.java.read.propertyfile.ReadPropertyFile;
 
 import java.util.Properties;
 

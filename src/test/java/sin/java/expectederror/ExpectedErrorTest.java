@@ -1,7 +1,7 @@
 package sin.java.expectederror;
 
 import org.junit.Test;
-import sin.java.readpropertyfile.propertyfile.ReadPropertyFile;
+import sin.java.read.propertyfile.ReadPropertyFile;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
