@@ -10,5 +10,7 @@ Project Setup & Dependencies
 
 **Dependencies:** <br />
    1. Junit 4.13 
-   1. Lombok
-   1. Apache Commons-lang3
+   2. Lombok
+   3. Apache Commons-lang3
+
+
